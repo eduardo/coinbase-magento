@@ -1,6 +1,7 @@
 coinbase-magento
 ================
 **NOTE: This is the Sandbox version of the magento plugin**
+
 *For the non-sandboxed version, check
 https://github.com/coinbase/coinbase-magento*
 

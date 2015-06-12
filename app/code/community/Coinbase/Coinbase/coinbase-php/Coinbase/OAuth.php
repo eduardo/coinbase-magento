@@ -15,7 +15,7 @@ class Coinbase_OAuth
 
     public function createAuthorizeUrl($scope)
     {
-        $url = "https://coinbase.com/oauth/authorize?response_type=code" .
+        $url = "https://sandbox.coinbase.com/oauth/authorize?response_type=code" .
             "&client_id=" . urlencode($this->_clientId) .
             "&redirect_uri=" . urlencode($this->_redirectUri) .
             "&scope=" . $scope;
@@ -53,7 +53,7 @@ class Coinbase_OAuth
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($postFields));
-        curl_setopt($curl, CURLOPT_URL, 'https://coinbase.com/oauth/token');
+        curl_setopt($curl, CURLOPT_URL, 'https://sandbox.coinbase.com/oauth/token');
         curl_setopt($curl, CURLOPT_CAINFO, dirname(__FILE__) . '/ca-coinbase.crt');
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HTTPHEADER, array('User-Agent: CoinbasePHP/v1'));

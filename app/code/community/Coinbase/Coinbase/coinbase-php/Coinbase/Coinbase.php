@@ -2,7 +2,7 @@
 
 class Coinbase
 {
-    const API_BASE = 'https://coinbase.com/api/v1/';
+    const API_BASE = 'https://api.sandbox.coinbase.com/v1/';
     private $_rpc;
     private $_authentication;
 
@@ -213,7 +213,7 @@ class Coinbase
 
         $returnValue = new stdClass();
         $returnValue->button = $response->button;
-        $returnValue->embedHtml = "<div class=\"coinbase-button\" data-code=\"" . $response->button->code . "\"></div><script src=\"https://coinbase.com/assets/button.js\" type=\"text/javascript\"></script>";
+        $returnValue->embedHtml = "<div class=\"coinbase-button\" data-code=\"" . $response->button->code . "\"></div><script src=\"https://sandbox.coinbase.com/assets/button.js\" type=\"text/javascript\"></script>";
         $returnValue->success = true;
         return $returnValue;
     }

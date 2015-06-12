@@ -106,7 +106,7 @@ class Coinbase_Coinbase_Model_PaymentMethod extends Mage_Payment_Model_Method_Ab
       } catch (Exception $e) {
         throw new Exception("Could not generate checkout page. Double check your API Key and Secret. " . $e->getMessage());
       }
-      $redirectUrl = 'https://coinbase.com/checkouts/' . $code;
+      $redirectUrl = 'https://sandbox.coinbase.com/checkouts/' . $code;
     
       // Step 2: Redirect customer to payment page
       $payment->setIsTransactionPending(true); // Set status to Payment Review while waiting for Coinbase postback

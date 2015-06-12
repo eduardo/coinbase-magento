@@ -7,6 +7,7 @@ Download the plugin here: https://github.com/coinbase/coinbase-magento/archive/m
 
 Installation
 -------
+*NOTE: This is the Sandbox version of the magento plugin*
 
 Download the plugin and copy the 'app' folder to the root of your Magento installation.
 
